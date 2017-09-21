@@ -12,7 +12,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDao ud;
 	
-	@Override
 	public UserBean login(String loginName, String password) {
 		// TODO Auto-generated method stub
 		return ud.login(loginName, password);
