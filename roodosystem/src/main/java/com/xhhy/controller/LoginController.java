@@ -29,6 +29,7 @@ public class LoginController {
 				return "/index.jsp";
 			}
 		}else{
+			System.out.println("hello");
 			m.addAttribute("msg", "账号或密码错误");
 			return "/login.jsp";
 		}
