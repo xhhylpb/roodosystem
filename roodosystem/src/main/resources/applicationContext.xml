@@ -145,4 +145,11 @@
         <property name="shared" value="true" />
     </bean>
 	
+	<!-- 登录拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/><!-- 拦截所有 -->
+			<bean class="com.xhhy.interceptor.LoginInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>

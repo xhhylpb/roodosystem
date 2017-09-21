@@ -4,6 +4,17 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaeehttp://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
     id="WebApp_ID" version="3.1">
     <display-name>test</display-name>
+    <servlet-mapping>
+    	<servlet-name>default</servlet-name>
+    	<url-pattern>*.js</url-pattern>
+    	<url-pattern>*.css</url-pattern>
+    	<url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.html</location>
+    </error-page>
+
     <!-- SpringMVC的核心控制器 -->
 	<servlet>
 		<servlet-name>springDispatcherServlet</servlet-name>

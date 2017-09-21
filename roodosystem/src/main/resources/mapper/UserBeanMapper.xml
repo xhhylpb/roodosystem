@@ -20,4 +20,8 @@
 		<result column="addtime" jdbcType="DATE" property="addtime" />
 		<result column="del" jdbcType="INTEGER" property="del" />
 	</resultMap>
+	<select id="login" resultMap="myuser">
+		select user_id,loginname,password,user_name,sex,id_card,del from user_tb
+		where loginname = #{ln} and password = #{ps}
+	</select>
 </mapper>

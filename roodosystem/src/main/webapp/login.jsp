@@ -90,8 +90,6 @@
 
 		} else if (!checkPs()) {
 
-		} else if (!checkValidate()) {
-
 		} else {
 			var loginname = document.getElementById("ln");
 			var password = document.getElementById("ps");
@@ -114,10 +112,6 @@
 			document.getElementById("ln").value = GetCookie("loginname");
 			document.getElementById("ps").value = GetCookie("password");
 		}
-	}
-	function changeImg() {
-		var time = new Date();
-		document.getElementById("vf").src = "number.jpg?time=" + time.getTime();
 	}
 </script>
 </head>
@@ -165,26 +159,6 @@
 								style="height: 14px">
 								<label class="control-label" style="color: red; font-size: 10px"
 									id="lp"></label>
-							</div>
-						</div>
-						<div class="login-input form-group ">
-							<label
-								class="col-md-2 col-md-offset-3 control-label col-xs-8 col-xs-offset-2 col-sm-2">验证码</label>
-							<div
-								class="col-md-2 col-md-offset-0 col-xs-4 col-xs-offset-2 col-sm-3 col-sm-offset-0">
-								<input type="text" class="form-control img-responsive"
-									name="yzm" value="" id="yzm" onblur="checkValidate()" />
-							</div>
-							<div
-								class="col-md-2 col-md-offset-0 col-xs-4 col-xs-offset-0 col-sm-3 col-sm-offset-0 img-responsive">
-								<a href="javascript:changeImg()"><img src="number.jpg"
-									id="vf"></a>
-							</div>
-							<div
-								class="col-xs-8 col-xs-offset-2 col-sm-offset-4  col-md-offset-0 col-md-3"
-								style="height: 14px">
-								<label class="control-label" style="color: red; font-size: 10px"
-									id="lv">${vfcode }</label>
 							</div>
 						</div>
 						<div class="form-group text-center">
